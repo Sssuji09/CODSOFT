@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #723e31;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #723e31;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #723e31;
+            width:100%;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #723e31;
+        }
+
+        .intro-text {
+            margin: 30px auto;
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .intro-text h3 {
+            margin-top: 0;
+            color: #723e31;
+        }
+
+        .gradient-text {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, pink, cyan, lime);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientMove 5s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #723e31;">Flower Species Classification</h1>
+
+    <!-- Introduction Section -->
+    <div class="intro-text">
+        <h3>How the Prediction Works</h3>
+        <p>This tool uses a machine learning model to predict the species of an Iris flower, based on several key features:</p>
+        <ul>
+            <li><strong>Sepal Length:</strong> The length of the outer petals, which can help distinguish between species with different petal shapes.</li>
+            <li><strong>Sepal Width:</strong> The width of the outer petals, influencing how closely species resemble one another in physical characteristics.</li>
+            <li><strong>Petal Length:</strong> Longer petals are typically found in certain species, serving as a key indicator for species classification.</li>
+            <li><strong>Petal Width:</strong> Wider petals can be a distinguishing feature for species like Iris-virginica, which has more pronounced petals compared to others.</li>
+        </ul>
+        <p>By entering the details about a flower’s measurements, this model uses these features to predict the species of the flower.</p>
+        <p>Each feature contributes to the model’s ability to classify the flower correctly, with petal length and width often being the most crucial distinguishing factors.</p>
+
+        <!-- Try Now in Gradient (Link to Form Page) -->
+        <p class="gradient-text"><a href="/form_page1" style="text-decoration: none; color: inherit;">Try Now!!!</a></p>
+    </div>
+</body>
+</html>

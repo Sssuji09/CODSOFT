@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #723e31;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #723e31;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #723e31;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #723e31;
+            width:100%;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #723e31;
+        }
+
+        .intro-text {
+            margin: 30px auto;
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .intro-text h3 {
+            margin-top: 0;
+            color: #723e31;
+        }
+
+        .gradient-text {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, pink, cyan, lime);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientMove 5s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Sales Prediction Model</h1>
+
+    <!-- Introduction Section -->
+    <div class="intro-text">
+        <h3>How the Prediction Works</h3>
+        <p>This tool uses a machine learning model to predict sales based on the budget allocation for three main advertising channels: TV, Radio, and Newspaper. Here's how each feature affects the prediction:</p>
+        <ul>
+            <li><strong>TV Advertising:</strong> TV advertising has a significant impact on sales. The model captures both linear and non-linear effects of TV spending on sales, meaning that as TV spending increases, predicted sales generally rise, though the exact effect depends on the interactions with Radio and Newspaper spending.</li>
+            <li><strong>Radio Advertising:</strong> Radio spending influences sales but with a lesser impact compared to TV. Its effect varies based on how it interacts with TV and Newspaper spending. Higher spending on radio can lead to higher sales, but its impact is refined by the other features.</li>
+            <li><strong>Newspaper Advertising:</strong> Newspaper advertising has a subtler effect on sales. Its influence is dependent on combined spending with TV and Radio. While it may not always have the same direct effect as TV or Radio, it helps refine the model's prediction through its interactions with other factors.</li>
+        </ul>
+        <p>In summary, our model uses <strong>Polynomial Regression</strong> to account for both individual effects and the interactions between these advertising channels, providing a comprehensive prediction of sales based on advertising budgets.</p>
+        
+        <!-- Try Now in Gradient (Link to Form Page) -->
+        <p class="gradient-text"><a href="/form_page2" style="text-decoration: none; color: inherit;">Try Now!!!</a></p>
+    </div>
+</body>
+</html>

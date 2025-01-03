@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic and Sales Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 0;
+            background-color: #f2f1ef;
+        }
+        header {
+            background-color: #d9d2cc;
+        }
+        .button-container {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            text-align: center; /* Center the label below the image */
+            border: none;
+            background: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+        }
+        .button-container img {
+            width: 300px;
+            height: 250px;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #d9d2cc;
+            border-width: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .button-container:hover img {
+            transform: scale(1.05); /* Slightly enlarge image on hover */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        }
+        .button-label {
+            margin-top: 10px;
+            color: #723e31;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body style="background-color:#f2f1ef;">
+    <h1 style="color: #723e31;">CodSoft Intern (Domain: Data Science)</h1>
+        <div style="margin-top: 100px;">
+            <div class="button-container"  onclick="location.href='/titanic_form'">
+                <img src="{{ url_for('static', filename='titanic.jpg') }}" alt="Titanic Survival Prediction">
+                <div class="button-label">Titanic Survival Prediction</div>
+            </div>
+            <div class="button-container" onclick="location.href='/iris_form'">
+                <img src="{{ url_for('static', filename='iris.jpeg') }}" alt="Iris Classification">
+                <div class="button-label">Iris Classification</div>
+            </div>
+            <div class="button-container" onclick="location.href='/sales_form'">
+                <img src="{{ url_for('static', filename='sales.jpg') }}" alt="Sales Prediction">
+                <div class="button-label">Sales Prediction</div>
+            </div>
+        </div>
+</body>
+</html>

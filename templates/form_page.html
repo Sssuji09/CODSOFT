@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Survival Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #723e31;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #723e31;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #723e31;
+            width:100%;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #723e31;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #723e31;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            color: #505050;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #723e31;">Titanic Survival Prediction</h1>
+
+    <!-- Titanic Survival Prediction Form -->
+    <form method="POST">
+        <label for="Fare">Fare:</label>
+        <input type="text" id="Fare" name="Fare" required><br><br>
+
+        <label for="Sex">Sex (0 = Female, 1 = Male):</label>
+        <input type="text" id="Sex" name="Sex" required><br><br>
+
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age" required><br><br>
+
+        <label for="Pclass">Pclass (1, 2, or 3):</label>
+        <input type="text" id="Pclass" name="Pclass" required><br><br>
+
+        <label for="FamilySize">Family Size:</label>
+        <input type="text" id="FamilySize" name="FamilySize" required><br><br>
+
+        <label for="IsAlone">Is Alone (0 = No, 1 = Yes):</label>
+        <input type="text" id="IsAlone" name="IsAlone" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+    <div class="prediction">
+        <center><h2 style="color: #361810;">{{ prediction_text }}</h2></center>
+    </div>
+    {% endif %}
+
+    <div class="back-link">
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
